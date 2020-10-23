@@ -45,7 +45,7 @@
   <script>
     fetch("https://api.kawalcorona.com/")
     .then((response) => {
-      return response.json()})
+      return response.json()}) 
     .then((data) => {
       for(i = 0; i < data.length; i++){
         let negara = data[i].attributes.Country_Region
