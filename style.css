@@ -11,7 +11,7 @@ text-align: center;
 
 }
 #search{
-  width: 100rem;
+  
   margin: 2% 0 0 25%;
 }
 .a{
@@ -22,8 +22,18 @@ text-align: center;
   font-family: 'Staatliches', cursive;
   background-color:transparent;
 }
-button{
-  border-radius: 2px;
+.naik{
+  margin-top: 6px;
+}
+#btnsearch{
+  background-color: tomato;
+  font-family: 'Staatliches', cursive;
+  border-radius: 10px;
+  width: 70px;
+  margin-top: -45px;
+  margin-left: 50%;
+  text-align: center;
+  float: left;
 }
 .find{
   height: 40px;
