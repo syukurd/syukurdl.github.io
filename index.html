@@ -7,12 +7,16 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
 </head>
 <body>
-  <div id="search">
+  <select name="" id="select">
+    <option value="default">Daftar Negara</option>  
+  </select>
+  <!-- <div id="search">
     <input type="text" class="find a" value="masukan kata kunci">
 </div>
-<div class="find b" id = "btnsearch"><p class="naik">Search<p></div>
+<div class="find b" id = "btnsearch"><p class="naik">Search<p></div> -->
   <div class="container">
     <div class="region"><h1>Kasus Korona Saat Ini di <span id="country"></span></h1>
     <h1>Update Terakhir : <span id="last_update"></span></h1>
@@ -30,43 +34,17 @@
     </div>
     <div class="box three">
       <i class="fas fa-7x fa-th-list"></i>
-        <h1 class="text"><p></p>Konfirmasi</h1>
-        <div id="confirmed" class="text large"></div>
+      <h1 class="text"><p></p>Konfirmasi</h1>
+      <div id="confirmed" class="text large"></div>
     </div>  
-      <div class="box four">
-        &nbsp;&nbsp;<i class="fas fa-7x fa-check-square"></i>
-        <h1 class="text">Sembuh</h1>
-        <div id="recovered" class="text large"></div>
-      </div>
-      
+    <div class="box four">
+      &nbsp;&nbsp;<i class="fas fa-7x fa-check-square"></i>
+      <h1 class="text">Sembuh</h1>
+      <div id="recovered" class="text large"></div>
     </div>
+    
   </div>
+</div>
 
-  <script>
-    fetch("https://api.kawalcorona.com/")
-    .then((response) => {
-      return response.json()}) 
-    .then((data) => {
-      for(i = 0; i < data.length; i++){
-        let negara = data[i].attributes.Country_Region
-        if(negara === "Indonesia"){
-          console.log(data[i].attributes)
-          let country = document.getElementById("country")
-          let last_update = document.getElementById("last_update")
-          let Active = document.getElementById("Active")
-          let death = document.getElementById("death")
-          let confirmed = document.getElementById("confirmed")
-          let recovered = document.getElementById("recovered")
-          let result = data[i].attributes
-          last_update.innerHTML = result.Last_Update
-          country.innerHTML = result.Country_Region
-          Active.innerHTML = result.Active
-          death.innerHTML = result.Deaths
-          confirmed.innerHTML = result.Confirmed
-          recovered.innerHTML = result.Recovered
-         }
-    }
-    })
-  </script>
 </body>
 </html>

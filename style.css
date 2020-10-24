@@ -39,16 +39,17 @@ text-align: center;
   border-radius: 20px;
 }
 .container{ 
-   margin-top:5%;
+   margin-top:2%;
    margin-left: 5%;
  }
 .box{
   border-radius: 1rem;
   width: 270px;
+  margin-bottom: 10px;
   height: 300px;
   position: relative;
   float: left;
-  margin-left: 2%;
+  margin-left: 3%;
   background: white;
 }
 .box:hover{
@@ -91,4 +92,19 @@ text-align: center;
 .text{
 
   text-align: center;
+}
+
+#select{
+
+  margin:1% 0 0 30%;
+  width: 25%;
+  height: 40px;
+  background-color: rgb(255,119,0);
+  background: linear-gradient(90deg, rgba(255,119,0,1) 0%, rgba(255,0,112,1) 100%, rgba(214,0,255,1) 100%);
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 0.1rem;
+}
+
+select option:hover{
+  background-color: red;
 }
