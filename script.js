@@ -7,7 +7,7 @@ fetch("https://api.kawalcorona.com/")
         let select = document.getElementById("select")
       
         let negara = data[i].attributes.Country_Region
-        if(negara === "Israel"){
+        if(negara === "Indonesia"){
           console.log(data[i].attributes)
           let country = document.getElementById("country")
           let last_update = document.getElementById("last_update")
@@ -28,9 +28,9 @@ fetch("https://api.kawalcorona.com/")
          let arr = []
          arr.push(data[i].attributes.Country_Region)
          for(let j = 0; j < arr.length; j++){
-           console.log(arr[j])
+           let asli = (arr[j])
            let tambah = document.createElement("OPTION")
-           txt = document.createTextNode(arr[j])
+           txt = document.createTextNode(asli)
            tambah.appendChild(txt)
            select.insertBefore(tambah, select.lastChild)
           } 
